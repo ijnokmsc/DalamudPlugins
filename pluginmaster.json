@@ -1,10 +1,10 @@
-[
+﻿[
   {
     "Author": "CraftFlow Team",
     "Name": "CraftFlow",
     "InternalName": "CraftFlow",
-    "AssemblyVersion": "0.2.3.0",
-    "Description": "FF14生产辅助插件，提供核心功能：(1) BOM递归展开——输入目标装备/食物/收藏品，自动递归分解全部中间材料，生成完整材料清单；(2) 采集推送——一键将待采集材料列表推送至GatherBuddyReborn，快速定位采集点；(3) 一键制作——调用Artisan插件自动制作，独立进度窗口实时显示。使用 /cf 或 /craftflow 打开主窗口。",
+    "AssemblyVersion": "0.2.4.0",
+    "Description": "FF14生产辅助插件：BOM递归展开/采集推送至GatherBuddyReborn/一键Artisan制作/工票计算。支持装备、食物、药品、收藏品。使用 /craftflow 打开。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/ijnokmsc/CraftFlow",
     "Tags": [
@@ -20,8 +20,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/craftflow.png",
     "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.3.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.3.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.4/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.4/latest.zip"
   },
   {
     "Author": "FateWhisper Team (based on SilverDasher)",
