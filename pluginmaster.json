@@ -1,0 +1,60 @@
+[
+  {
+    "Author": "CraftFlow Team",
+    "Name": "CraftFlow",
+    "InternalName": "CraftFlow",
+    "AssemblyVersion": "0.2.3.0",
+    "Description": "FF14生产辅助插件，提供核心功能：(1) BOM递归展开——输入目标装备/食物/收藏品，自动递归分解全部中间材料，生成完整材料清单；(2) 采集推送——一键将待采集材料列表推送至GatherBuddyReborn，快速定位采集点；(3) 一键制作——调用Artisan插件自动制作，独立进度窗口实时显示。使用 /cf 或 /craftflow 打开主窗口。",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "crafting",
+      "gathering",
+      "bom",
+      "artisan",
+      "gatherbuddy",
+      "scrip"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
+    "AcceptsFeedback": true,
+    "RepoUrl": "https://github.com/ijnokmsc/CraftFlow",
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.2.3.0/CraftFlow-0.2.3.0.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.2.3.0/CraftFlow-0.2.3.0.zip",
+    "DownloadLinkTesting": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.2.3.0/CraftFlow-0.2.3.0.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdated": "0"
+  },
+  {
+    "Author": "SilverDasher",
+    "Name": "SilverDasher",
+    "InternalName": "SilverDasher",
+    "AssemblyVersion": "0.1.0.0",
+    "Description": "FF14 跨服猎怪与 FATE 播报插件",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "hunt",
+      "fate",
+      "broadcast",
+      "cross-world"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "跨服猎怪与 FATE 播报",
+    "AcceptsFeedback": true,
+    "RepoUrl": "https://github.com/ijnokmsc/SilverDasher",
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.1.0.0/SilverDasher-0.1.0.0.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.1.0.0/SilverDasher-0.1.0.0.zip",
+    "DownloadLinkTesting": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v0.1.0.0/SilverDasher-0.1.0.0.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdated": "0"
+  }
+]

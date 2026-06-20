@@ -1,0 +1,115 @@
+name: Build and Release Plugins
+
+on:
+  workflow_dispatch:
+    inputs:
+      craftflow_version:
+        description: 'CraftFlow 版本号 (如 0.2.3.0)'
+        required: false
+        default: ''
+      silverdasher_version:
+        description: 'SilverDasher 版本号 (如 0.1.0.0)'
+        required: false
+        default: ''
+  push:
+    paths:
+      - 'pluginmaster.json'
+      - '.github/workflows/build.yml'
+
+jobs:
+  # ============================================================
+  # CraftFlow
+  # ============================================================
+  build-craftflow:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout DalamudPlugins
+        uses: actions/checkout@v4
+        with:
+          path: dalamud-plugins
+
+      - name: Checkout CraftFlow source
+        uses: actions/checkout@v4
+        with:
+          repository: ijnokmsc/CraftFlow
+          path: craftflow-src
+          ref: main
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore Dalamud
+        run: |
+          # Download Dalamud SDK from XIVLauncherCN
+          # This step may need adjustment based on available Dalamud distribution
+          dotnet restore craftflow-src/CraftFlow/CraftFlow.csproj
+        shell: pwsh
+
+      - name: Build CraftFlow
+        run: dotnet build craftflow-src/CraftFlow/CraftFlow.csproj -c Release --no-restore
+        shell: pwsh
+
+      - name: Pack CraftFlow
+        run: |
+          $version = "${{ inputs.craftflow_version }}"
+          if (-not $version) { $version = "0.0.0.0" }
+          $src = "craftflow-src/CraftFlow/bin/Release/CraftFlow"
+          $out = "CraftFlow-$version.zip"
+          Compress-Archive -Path "$src/*" -DestinationPath $out
+          echo "artifact=$out" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: Upload CraftFlow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CraftFlow
+          path: CraftFlow-*.zip
+
+  # ============================================================
+  # SilverDasher
+  # ============================================================
+  build-silverdasher:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout DalamudPlugins
+        uses: actions/checkout@v4
+        with:
+          path: dalamud-plugins
+
+      - name: Checkout SilverDasher source
+        uses: actions/checkout@v4
+        with:
+          repository: ijnokmsc/SilverDasher
+          path: silverdasher-src
+          ref: main
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore SilverDasher
+        run: dotnet restore silverdasher-src/SilverDasher/SilverDasher.csproj
+        shell: pwsh
+
+      - name: Build SilverDasher
+        run: dotnet build silverdasher-src/SilverDasher/SilverDasher.csproj -c Release --no-restore
+        shell: pwsh
+
+      - name: Pack SilverDasher
+        run: |
+          $version = "${{ inputs.silverdasher_version }}"
+          if (-not $version) { $version = "0.0.0.0" }
+          $src = "silverdasher-src/SilverDasher/bin/Release/SilverDasher"
+          $out = "SilverDasher-$version.zip"
+          Compress-Archive -Path "$src/*" -DestinationPath $out
+          echo "artifact=$out" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: Upload SilverDasher artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SilverDasher
+          path: SilverDasher-*.zip
