@@ -6,6 +6,7 @@
     "AssemblyVersion": "0.2.3.0",
     "Description": "FF14生产辅助插件，提供核心功能：(1) BOM递归展开——输入目标装备/食物/收藏品，自动递归分解全部中间材料，生成完整材料清单；(2) 采集推送——一键将待采集材料列表推送至GatherBuddyReborn，快速定位采集点；(3) 一键制作——调用Artisan插件自动制作，独立进度窗口实时显示。使用 /cf 或 /craftflow 打开主窗口。",
     "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/ijnokmsc/CraftFlow",
     "Tags": [
       "crafting",
       "gathering",
@@ -15,19 +16,12 @@
       "scrip"
     ],
     "DalamudApiLevel": 15,
-    "LoadRequiredState": 0,
-    "LoadSync": false,
-    "CanUnloadAsync": false,
     "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/craftflow.png",
     "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
     "AcceptsFeedback": true,
-    "RepoUrl": "https://github.com/ijnokmsc/CraftFlow",
     "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip",
-    "DownloadLinkTesting": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip",
-    "IsHide": false,
-    "IsTestingExclusive": false,
-    "LastUpdated": "0"
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip"
   },
   {
     "Author": "FateWhisper Team (based on SilverDasher)",
@@ -36,6 +30,7 @@
     "AssemblyVersion": "0.2.0.0",
     "Description": "FF14 跨服猎怪与 FATE 播报插件。消息来源：SilverDasher（ACT 版）MQTT 网络。支持 MQTT 跨服消息订阅、TTS 语音播报、游戏原生 Toast 通知。使用 /fw 或 /fatewhisper 打开。",
     "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/ijnokmsc/FateWhisper",
     "Tags": [
       "hunt",
       "fate",
@@ -44,18 +39,11 @@
       "silverdasher"
     ],
     "DalamudApiLevel": 15,
-    "LoadRequiredState": 0,
-    "LoadSync": false,
-    "CanUnloadAsync": false,
     "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/fatewhisper.png",
     "Punchline": "跨服猎怪与 FATE 播报 — 源自 SilverDasher",
     "AcceptsFeedback": true,
-    "RepoUrl": "https://github.com/ijnokmsc/FateWhisper",
     "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip",
-    "DownloadLinkTesting": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip",
-    "IsHide": false,
-    "IsTestingExclusive": false,
-    "LastUpdated": "0"
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip"
   }
 ]
