@@ -7,8 +7,8 @@ on:
         description: 'CraftFlow 版本号 (如 0.2.3.0)'
         required: false
         default: ''
-      silverdasher_version:
-        description: 'SilverDasher 版本号 (如 0.1.0.0)'
+      fatewhisper_version:
+        description: 'FateWhisper 版本号 (如 0.2.0.0)'
         required: false
         default: ''
   push:
@@ -68,9 +68,9 @@ jobs:
           path: CraftFlow-*.zip
 
   # ============================================================
-  # SilverDasher
+  # FateWhisper
   # ============================================================
-  build-silverdasher:
+  build-fatewhisper:
     runs-on: windows-latest
     steps:
       - name: Checkout DalamudPlugins
@@ -78,11 +78,11 @@ jobs:
         with:
           path: dalamud-plugins
 
-      - name: Checkout SilverDasher source
+      - name: Checkout FateWhisper source
         uses: actions/checkout@v4
         with:
-          repository: ijnokmsc/SilverDasher
-          path: silverdasher-src
+          repository: ijnokmsc/FateWhisper
+          path: fatewhisper-src
           ref: main
 
       - name: Setup .NET
@@ -90,26 +90,26 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore SilverDasher
-        run: dotnet restore silverdasher-src/SilverDasher/SilverDasher.csproj
+      - name: Restore FateWhisper
+        run: dotnet restore fatewhisper-src/FateWhisper.csproj
         shell: pwsh
 
-      - name: Build SilverDasher
-        run: dotnet build silverdasher-src/SilverDasher/SilverDasher.csproj -c Release --no-restore
+      - name: Build FateWhisper
+        run: dotnet build fatewhisper-src/FateWhisper.csproj -c Release --no-restore
         shell: pwsh
 
-      - name: Pack SilverDasher
+      - name: Pack FateWhisper
         run: |
-          $version = "${{ inputs.silverdasher_version }}"
+          $version = "${{ inputs.fatewhisper_version }}"
           if (-not $version) { $version = "0.0.0.0" }
-          $src = "silverdasher-src/SilverDasher/bin/Release/SilverDasher"
-          $out = "SilverDasher-$version.zip"
+          $src = "fatewhisper-src/bin/Release/FateWhisper"
+          $out = "FateWhisper-$version.zip"
           Compress-Archive -Path "$src/*" -DestinationPath $out
           echo "artifact=$out" >> $env:GITHUB_ENV
         shell: pwsh
 
-      - name: Upload SilverDasher artifact
+      - name: Upload FateWhisper artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SilverDasher
-          path: SilverDasher-*.zip
+          name: FateWhisper
+          path: FateWhisper-*.zip

@@ -15,7 +15,7 @@ https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/pluginmaster.json
 | 插件 | 版本 | 描述 |
 |------|------|------|
 | **CraftFlow** | 0.2.3.0 | FF14生产辅助 - BOM展开/采集推送/一键制作 |
-| **SilverDasher** | 0.1.0.0 | 跨服猎怪与 FATE 播报 |
+| **FateWhisper** | 0.2.0.0 | 跨服猎怪与 FATE 播报 — 源自 SilverDasher |
 
 ## 仓库结构
 
@@ -33,4 +33,4 @@ DalamudPlugins/
 
 插件源码：
 - [CraftFlow](https://github.com/ijnokmsc/CraftFlow)
-- [SilverDasher](https://github.com/ijnokmsc/SilverDasher)
+- [FateWhisper](https://github.com/ijnokmsc/FateWhisper)

@@ -1,10 +1,10 @@
 # ================================================================
 # DalamudPlugins 本地构建脚本
-# 构建 CraftFlow 和 SilverDasher 并打包为 zip 发布文件
+# 构建 CraftFlow 和 FateWhisper 并打包为 zip 发布文件
 # ================================================================
 param(
     [string]$CraftFlowVersion = "0.2.3.0",
-    [string]$SilverDasherVersion = "0.1.0.0",
+    [string]$FateWhisperVersion = "0.2.0.0",
     [switch]$UpdatePluginMaster
 )
 
@@ -14,7 +14,7 @@ $ReleaseDir = Join-Path $ScriptDir "release"
 
 # 插件源码路径（相对于本仓库）
 $CraftFlowSrc = "D:\deepseek\CraftFlow\CraftFlow"
-$SilverDasherSrc = "D:\deepseek\SilverDasher"
+$FateWhisperSrc = "D:\deepseek\SilverDasher"
 
 Write-Host "================================================" -ForegroundColor Cyan
 Write-Host "  DalamudPlugins 构建脚本" -ForegroundColor Cyan
@@ -57,37 +57,37 @@ if (Test-Path $CraftFlowLatestZip) {
 Write-Host "  -> $CraftFlowZip" -ForegroundColor Green
 
 # ----------------------------------------------------------------
-# 构建 SilverDasher
+# 构建 FateWhisper
 # ----------------------------------------------------------------
 Write-Host ""
-Write-Host "[3/4] 构建 SilverDasher v$SilverDasherVersion ..." -ForegroundColor Yellow
+Write-Host "[3/4] 构建 FateWhisper v$FateWhisperVersion ..." -ForegroundColor Yellow
 
-Push-Location $SilverDasherSrc
+Push-Location $FateWhisperSrc
 try {
-    dotnet restore SilverDasher.csproj
-    dotnet build SilverDasher.csproj -c Release
-    if ($LASTEXITCODE -ne 0) { throw "SilverDasher 构建失败" }
+    dotnet restore FateWhisper.csproj
+    dotnet build FateWhisper.csproj -c Release
+    if ($LASTEXITCODE -ne 0) { throw "FateWhisper 构建失败" }
     Write-Host "  -> 构建成功" -ForegroundColor Green
 } finally {
     Pop-Location
 }
 
-Write-Host "[4/4] 打包 SilverDasher ..." -ForegroundColor Yellow
-$SilverDasherLatestZip = "$SilverDasherSrc\bin\Release\SilverDasher\latest.zip"
-$SilverDasherZip = Join-Path $ReleaseDir "SilverDasher-$SilverDasherVersion.zip"
-if (Test-Path $SilverDasherLatestZip) {
-    Copy-Item $SilverDasherLatestZip $SilverDasherZip -Force
+Write-Host "[4/4] 打包 FateWhisper ..." -ForegroundColor Yellow
+$FateWhisperLatestZip = "$FateWhisperSrc\bin\Release\FateWhisper\latest.zip"
+$FateWhisperZip = Join-Path $ReleaseDir "FateWhisper-$FateWhisperVersion.zip"
+if (Test-Path $FateWhisperLatestZip) {
+    Copy-Item $FateWhisperLatestZip $FateWhisperZip -Force
     Write-Host "  -> 使用 Dalamud SDK 生成的 latest.zip" -ForegroundColor DarkGray
 } else {
     # 备选：手动收集 DLL 和 JSON 文件
-    $buildBase = "$SilverDasherSrc\bin\Release"
+    $buildBase = "$FateWhisperSrc\bin\Release"
     $files = @(Get-ChildItem $buildBase -File | Where-Object { $_.Extension -in '.dll', '.json', '.pdb' })
-    if (Test-Path "$buildBase\SilverDasher") {
-        $files += @(Get-ChildItem "$buildBase\SilverDasher" -File)
+    if (Test-Path "$buildBase\FateWhisper") {
+        $files += @(Get-ChildItem "$buildBase\FateWhisper" -File)
     }
-    Compress-Archive -Path ($files | ForEach-Object { $_.FullName }) -DestinationPath $SilverDasherZip
+    Compress-Archive -Path ($files | ForEach-Object { $_.FullName }) -DestinationPath $FateWhisperZip
 }
-Write-Host "  -> $SilverDasherZip" -ForegroundColor Green
+Write-Host "  -> $FateWhisperZip" -ForegroundColor Green
 
 # ----------------------------------------------------------------
 # 更新 pluginmaster.json 中的 LastUpdated 时间戳
@@ -107,11 +107,11 @@ if ($UpdatePluginMaster) {
             $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$CraftFlowVersion/CraftFlow-$CraftFlowVersion.zip"
             $plugin.LastUpdated = $now
         }
-        elseif ($plugin.InternalName -eq "SilverDasher") {
-            $plugin.AssemblyVersion = $SilverDasherVersion
-            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$SilverDasherVersion/SilverDasher-$SilverDasherVersion.zip"
-            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$SilverDasherVersion/SilverDasher-$SilverDasherVersion.zip"
-            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$SilverDasherVersion/SilverDasher-$SilverDasherVersion.zip"
+        elseif ($plugin.InternalName -eq "FateWhisper") {
+            $plugin.AssemblyVersion = $FateWhisperVersion
+            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
+            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
+            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
             $plugin.LastUpdated = $now
         }
     }
