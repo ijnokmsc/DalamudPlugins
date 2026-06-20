@@ -102,16 +102,16 @@ if ($UpdatePluginMaster) {
     foreach ($plugin in $json) {
         if ($plugin.InternalName -eq "CraftFlow") {
             $plugin.AssemblyVersion = $CraftFlowVersion
-            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$CraftFlowVersion/CraftFlow-$CraftFlowVersion.zip"
-            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$CraftFlowVersion/CraftFlow-$CraftFlowVersion.zip"
-            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$CraftFlowVersion/CraftFlow-$CraftFlowVersion.zip"
+            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v$CraftFlowVersion/latest.zip"
+            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v$CraftFlowVersion/latest.zip"
+            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v$CraftFlowVersion/latest.zip"
             $plugin.LastUpdated = $now
         }
         elseif ($plugin.InternalName -eq "FateWhisper") {
             $plugin.AssemblyVersion = $FateWhisperVersion
-            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
-            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
-            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/v$FateWhisperVersion/FateWhisper-$FateWhisperVersion.zip"
+            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v$FateWhisperVersion/latest.zip"
+            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v$FateWhisperVersion/latest.zip"
+            $plugin.DownloadLinkTesting = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v$FateWhisperVersion/latest.zip"
             $plugin.LastUpdated = $now
         }
     }
