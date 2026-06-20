@@ -43,7 +43,7 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/fatewhisper.png",
     "Punchline": "跨服猎怪与 FATE 播报 — 源自 SilverDasher",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0/latest.zip"
   }
 ]
