@@ -20,8 +20,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/craftflow.png",
     "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v0.2.3.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.3.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.3.0/latest.zip"
   },
   {
     "Author": "FateWhisper Team (based on SilverDasher)",
@@ -43,7 +43,7 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/fatewhisper.png",
     "Punchline": "跨服猎怪与 FATE 播报 — 源自 SilverDasher",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v0.2.0.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.2.0.0/latest.zip"
   }
 ]

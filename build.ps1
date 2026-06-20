@@ -102,13 +102,13 @@ if ($UpdatePluginMaster) {
     foreach ($plugin in $json) {
         if ($plugin.InternalName -eq "CraftFlow") {
             $plugin.AssemblyVersion = $CraftFlowVersion
-            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v$CraftFlowVersion/latest.zip"
-            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/CraftFlow-v$CraftFlowVersion/latest.zip"
+            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/CraftFlow/releases/download/v$CraftFlowVersion/latest.zip"
+            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/CraftFlow/releases/download/v$CraftFlowVersion/latest.zip"
         }
         elseif ($plugin.InternalName -eq "FateWhisper") {
             $plugin.AssemblyVersion = $FateWhisperVersion
-            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v$FateWhisperVersion/latest.zip"
-            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/DalamudPlugins/releases/download/FateWhisper-v$FateWhisperVersion/latest.zip"
+            $plugin.DownloadLinkInstall = "https://github.com/ijnokmsc/FateWhisper/releases/download/v$FateWhisperVersion/latest.zip"
+            $plugin.DownloadLinkUpdate = "https://github.com/ijnokmsc/FateWhisper/releases/download/v$FateWhisperVersion/latest.zip"
         }
     }
 
