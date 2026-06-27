@@ -3,8 +3,8 @@
     "Author": "CraftFlow Team",
     "Name": "CraftFlow",
     "InternalName": "CraftFlow",
-    "AssemblyVersion": "0.2.5.0",
-    "Description": "FF14生产辅助插件：BOM递归展开/采集推送至GatherBuddyReborn/一键Artisan制作/工票计算。支持装备、食物、药品、收藏品。使用 /craftflow 打开。",
+    "AssemblyVersion": "0.2.6.0",
+    "Description": "FF14生产辅助插件：BOM递归展开/采集推送至GatherBuddyReborn/一键Artisan制作（已有半成品自动跳过）/工票计算。支持装备、食物、药品、收藏品。使用 /craftflow 打开。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/ijnokmsc/CraftFlow",
     "Tags": [
@@ -20,8 +20,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/craftflow.png",
     "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.5/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.5/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.6/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.6/latest.zip"
   },
   {
     "Author": "FateWhisper Team (based on SilverDasher)",
