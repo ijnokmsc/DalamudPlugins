@@ -27,8 +27,8 @@
     "Author": "FateWhisper Team (based on SilverDasher)",
     "Name": "FateWhisper",
     "InternalName": "FateWhisper",
-    "AssemblyVersion": "0.3.0.0",
-    "Description": "FF14 跨服猎怪与 FATE 播报插件。消息来源：SilverDasher（ACT 版）MQTT 网络。支持自动导航(vnavmesh+Lifestream/DCTraveler)、导航队列、TTS语音播报、Toast通知。使用 /fw 打开。",
+    "AssemblyVersion": "0.3.1.0",
+    "Description": "FF14 跨服猎怪与 FATE 播报插件。消息来源：SilverDasher（ACT 版）MQTT 网络。支持自动导航(vnavmesh+Lifestream)、导航队列、FATE坐标实时查询、TTS语音播报、Toast通知。使用 /fw 打开。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/ijnokmsc/FateWhisper",
     "Tags": [
@@ -44,7 +44,7 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/fatewhisper.png",
     "Punchline": "跨服猎怪与FATE播报 — 自动导航",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.1/latest.zip"
   }
 ]
