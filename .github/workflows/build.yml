@@ -95,6 +95,11 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      - name: Setup Dalamud (CI build references)
+        uses: Blooym/setup-dalamud@v1
+        with:
+          branch: release
+
       - name: Restore FateWhisper
         run: dotnet restore fatewhisper-src/FateWhisper.csproj
         shell: pwsh
