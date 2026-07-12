@@ -51,7 +51,7 @@
     "Author": "AutoTrash Team",
     "Name": "AutoTrash",
     "InternalName": "auto_trash_can",
-    "AssemblyVersion": "1.0.0.0",
+    "AssemblyVersion": "1.0.1.0",
     "Description": "FF14 Dalamud 插件，根据配置的物品列表自动丢弃背包（Inventory1~4）中的杂物。支持精确 ItemId 与模糊名称匹配、HQ 保护、数量阈值策略、列表 JSON/CSV 导入导出与丢弃日志。使用 /atrash 打开主窗口。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/ijnokmsc/TrashCan",
@@ -66,7 +66,7 @@
     "IconUrl": "https://raw.githubusercontent.com/ijnokmsc/DalamudPlugins/main/icons/trashcan.png",
     "Punchline": "FF14 自动丢弃垃圾桶 - 按列表自动清理背包杂物",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.0/latest.zip"
+    "DownloadLinkInstall": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.1/latest.zip"
   }
 ]
