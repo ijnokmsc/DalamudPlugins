@@ -21,7 +21,8 @@
     "Punchline": "FF14生产辅助 - BOM展开/采集推送/一键制作",
     "AcceptsFeedback": true,
     "DownloadLinkInstall": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.9/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.9/latest.zip"
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/CraftFlow/releases/download/v0.2.9/latest.zip",
+    "DownloadCount": 17
   },
   {
     "Author": "FateWhisper Team (based on SilverDasher)",
@@ -45,7 +46,8 @@
     "Punchline": "跨服猎怪与FATE播报 — 自动导航",
     "AcceptsFeedback": true,
     "DownloadLinkInstall": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.4/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.4/latest.zip"
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/FateWhisper/releases/download/v0.3.4/latest.zip",
+    "DownloadCount": 6
   },
   {
     "Author": "AutoTrash Team",
@@ -67,6 +69,7 @@
     "Punchline": "FF14 自动丢弃垃圾桶 - 按列表自动清理背包杂物",
     "AcceptsFeedback": true,
     "DownloadLinkInstall": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.3/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.3/latest.zip"
+    "DownloadLinkUpdate": "https://github.com/ijnokmsc/TrashCan/releases/download/v1.0.3/latest.zip",
+    "DownloadCount": 4
   }
 ]
